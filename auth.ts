@@ -3,8 +3,8 @@ import { authConfig } from './auth.config';
 import Credentials from 'next-auth/providers/credentials';
 import { z } from 'zod';
 import { sql } from '@vercel/postgres';
-import type { User } from '@/app/lib/definitions';
 import bcrypt from 'bcrypt';
+import { User } from "@/app/types/users";
 
 async function getUser(email: string): Promise<User | undefined> {
   try {
@@ -34,7 +34,7 @@ export const { auth, signIn, signOut } = NextAuth({
         if (passwordsMatch) return user;
       }
 
-      console.error('Invalid credentials');
+      console.error('Неверные данные');
       return null;
     },
   }),
