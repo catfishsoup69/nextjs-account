@@ -216,3 +216,14 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+export function ProfileSkeleton() {
+  return (
+    <>
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+    </>
+  );
+}
