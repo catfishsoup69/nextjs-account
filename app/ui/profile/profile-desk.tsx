@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useState } from "react";
 
 interface User {
@@ -29,17 +27,17 @@ interface User {
 export default function ProfileDesk() {
   const [user, setUser] = useState<User>();
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        const userData = await response.json();
-        setUser(userData[0]);
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
+  const fetchUserData = async () => {
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/users');
+      const userData = await response.json();
+      setUser(userData[0]);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
+  useEffect(() => {
     fetchUserData();
   }, []);
 
