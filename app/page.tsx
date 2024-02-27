@@ -14,7 +14,7 @@ export default function Page(): JSX.Element {
         Это главная страница на SSR. Ниже представлены данные с <Link className="text-blue-500 hover:underline" href="https://jsonplaceholder.typicode.com/posts" target="_blank">jsonplaceholder.typicode.com/posts</Link>:
       </p>
       <div>
-        <PostList/>
+        <PostList />
       </div>
     </main>
   );

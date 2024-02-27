@@ -23,7 +23,7 @@ export default async function Page() {
           </Button>
         </form>
       </div>
-      <p>
+      <p className="mb-4">
         Использую данные первого пользователя с <Link className="text-blue-500 hover:underline" href="https://jsonplaceholder.typicode.com/users" target="_blank">jsonplaceholder.typicode.com/users</Link>
       </p>
       <ProfileDesk/>
