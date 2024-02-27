@@ -2,6 +2,7 @@ import {Metadata} from "next";
 import ProfileDesk from "@/app/ui/profile/profile-desk";
 import {signOut} from "@/auth";
 import {Button} from "@/app/ui/button";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: 'Profile',
@@ -22,6 +23,9 @@ export default async function Page() {
           </Button>
         </form>
       </div>
+      <p>
+        Использую данные первого пользователя с <Link className="text-blue-500 hover:underline" href="https://jsonplaceholder.typicode.com/users" target="_blank">jsonplaceholder.typicode.com/users</Link>
+      </p>
       <ProfileDesk/>
     </main>
   );
